@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+
+  "name": "yGo",
+  "description": "This extension scraps a video url in a streamitup.net.il url and opens it in a new tab with an html5 video player to enable playback control ",
+  "version": "1.0",
+
+  "options_page": "options.html",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://www.streamitupcdn.net/*"
+    ]
+  },
+
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'",
+
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "all_frames": false,
+      "matches": [
+        "http://www.streamitupcdn.net/*"
+      ],
+      "js": [
+        "main.js"
+      ]
+    }
+  ],
+  "permissions": [
+   "activeTab",
+    "http://www.streamitupcdn.net/*"
+   ]
+}
+
+
+

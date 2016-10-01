@@ -2,7 +2,7 @@
 var url = location.search.match(/=(.+)/).pop();
 // document.querySelector('body').innerHTML = url;
 
-videojs("videoURL", {}, function() {
+videojs("video", {}, function() {
     console.log(this)
     // this.play()
 

@@ -5,17 +5,76 @@
     <title>yGO</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.13.0/video.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.13.0/alt/video-js-cdn.min.css" rel="stylesheet">
-    <script>
-  	videojs.options.flash.swf = "cdnjs.cloudflare.com/ajax/libs/video-js.swf"
-	</script>
 </head>
 <body>
-  <video id="example_video_1" class="video-js vjs-default-skin"
-  controls preload="auto" width="640" height="264">
- <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
- <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
- <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
- <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-</video>
+    <lu class="flex-container">
+    <video id="video" class="video-js vjs-default-skin vjs-big-play-centered flex-item"
+  		controls preload="auto" width="640" height="264">
+ 		<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+	</video>
+	<style>
+
+  #instructions { max-width: 640px; text-align: left; margin: 30px auto; }
+  #instructions textarea { width: 100%; height: 100px; }
+  
+  /* Show the controls (hidden at the start by default) */
+  .video-js .vjs-control-bar { 
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  /* Make the demo a little prettier */
+  body {
+    margin-top: 20px;
+    background: #222;
+    text-align: center; 
+    color: #aaa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: radial-gradient(#333, hsl(200,30%,6%) );
+  }
+
+  a, a:hover, a:visited { color: #76DAFF; }
+
+/*		body {
+		    margin-top: 20px;
+		    background: #197387;
+		    text-align: center; 
+		    color: #aaa;
+		    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		    background: radial-gradient(#333, hsl(200,30%,6%) );
+		}*/
+
+/*		.flex-container {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+
+			-webkit-flex-flow: row wrap;
+			justify-content: space-around;
+			background: radial-gradient(#333, hsl(200,30%,6%) );
+
+		}
+
+
+		.flex-item {
+			background: black;
+			padding: 5px;
+			margin: auto;
+
+			line-height: 150px;
+			text-align: center;
+		}
+*/	</style>
+	<script src="options.js"></script>
+	</lu>
 </body>
 </html>
+
